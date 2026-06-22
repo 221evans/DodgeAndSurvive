@@ -10,11 +10,11 @@
 class Player {
 public:
     Player();
-    float posX;
-    float posY;
+    Vector2 position;
     float speed;
     int width;
     int height;
+
 
     void Draw() const;
     void Update(float deltaTime);

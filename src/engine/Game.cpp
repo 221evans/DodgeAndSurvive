@@ -8,10 +8,12 @@ Game::Game() = default;
 
 void Game::Draw() const {
     player.Draw();
+    enemy.Draw();
 }
 
 void Game::Update(float deltaTime) {
     player.Update(deltaTime);
+    enemy.Update(deltaTime, &player);
 }
 
 Game::~Game() = default;

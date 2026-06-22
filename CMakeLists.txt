@@ -9,7 +9,10 @@ add_executable(DodgeAndSurvive main.cpp
         src/Engine/Game.cpp
         src/Engine/Game.h
         src/entites/Player.cpp
-        src/entites/Player.h)
+        src/entites/Player.h
+        src/entites/Enemy.cpp
+        src/entites/Enemy.h
+        src/engine/GameState.h)
 
 target_link_libraries(DodgeAndSurvive PRIVATE raylib)
 
