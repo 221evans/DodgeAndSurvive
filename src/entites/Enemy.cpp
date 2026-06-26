@@ -10,7 +10,9 @@
 #include "raylib.h"
 #include "raymath.h"
 
-Enemy::Enemy() : position(200,200), speed(10), width(25), height(25) {}
+Enemy::Enemy() : position(200, 200),speed(10), width(25), height(25) {
+    collisionRec = Rectangle{position.x, position.y, width, height};
+}
 
 void Enemy::Draw() const {
     DrawRectangle(static_cast<int>(position.x), static_cast<int>(position.y), 25, 25, RED);
@@ -27,7 +29,8 @@ void Enemy::Update(float deltaTime, Player* player) {
     }
 
 
-    std::cout << "Speed: " << speed << std::endl;
+    collisionRec.x = position.x;
+    collisionRec.y = position.y;
 
 }
 

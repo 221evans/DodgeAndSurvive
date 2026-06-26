@@ -11,9 +11,11 @@ class Player {
 public:
     Player();
     Vector2 position;
+    int width{};
+    int height{};
+    Rectangle collisionRec;
     float speed;
-    int width;
-    int height;
+
 
 
     void Draw() const;

@@ -6,12 +6,14 @@
 #define DODGEANDSURVIVE_GAME_H
 #include "../entites/Player.h"
 #include "../entites/Enemy.h"
+#include "GameState.h"
 
 class Game {
 public:
     Game();
     Player player;
     Enemy enemy;
+    GameState state;
     void Draw() const;
     void Update(float deltaTime);
     ~Game();

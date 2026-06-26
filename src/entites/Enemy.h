@@ -11,9 +11,10 @@ class Enemy {
 public:
     Enemy();
     Vector2 position;
+    Rectangle collisionRec{};
     float speed;
-    float width;
-    float height;
+    float width{};
+    float height{};
 
 
     void Draw() const;
